@@ -17,4 +17,11 @@ public class Tuberias : MonoBehaviour
     {
         transform.Translate(Vector3.back * Time.deltaTime * velocidad);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name == "Limite")
+        
+            Destroy(gameObject); 
+    }
 }

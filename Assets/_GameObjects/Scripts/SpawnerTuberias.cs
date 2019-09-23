@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnerTuberias : MonoBehaviour
 {
     public GameObject prefabTuberia;
-    float ratio = 1;
+    float ratio = 1.5f;
 
     // Start is called before the first frame update
     void Start()
