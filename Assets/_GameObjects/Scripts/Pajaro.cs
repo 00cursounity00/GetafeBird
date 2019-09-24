@@ -8,7 +8,7 @@ public class Pajaro : MonoBehaviour
     public int puntuacion = 0;
     Rigidbody rb;
     [SerializeField] GameObject prefabSangre;
-    private int fuerza = 400;
+    private int fuerza = 650;
     public Text txPuntuacion;
 
     // Start is called before the first frame update
@@ -46,7 +46,7 @@ public class Pajaro : MonoBehaviour
         else
         {
             puntuacion++;
-            txPuntuacion.text = "Puntuación: " + puntuacion.ToString();
+            txPuntuacion.text = "Score: " + puntuacion.ToString();
         }
     }
 

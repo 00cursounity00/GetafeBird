@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c5e5022c79971459721369350c4e2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 20
+  velocidad: 12
 --- !u!54 &2937401306005626861
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -75,8 +75,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.0334826, y: 42.276077, z: 0.9116545}
-  m_Center: {x: 0.013385773, y: -0.076122284, z: 2.1343074}
+  m_Size: {x: 4.0334826, y: 42.276077, z: 1.4974184}
+  m_Center: {x: 0.013385773, y: -0.076122284, z: 3.373426}
 --- !u!1 &8768106421221776846
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,7 +101,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8768106421221776846}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -6, z: 0}
+  m_LocalPosition: {x: 0, y: -7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8768106422307093113}
@@ -121,6 +121,7 @@ GameObject:
   - component: {fileID: 8768106421517500985}
   - component: {fileID: 8768106421517500986}
   - component: {fileID: 8768106421517500987}
+  - component: {fileID: 1398640529349942408}
   m_Layer: 0
   m_Name: Cuerpo
   m_TagString: Untagged
@@ -196,11 +197,25 @@ CapsuleCollider:
   m_GameObject: {fileID: 8768106421517500989}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2.0856266
   m_Direction: 1
   m_Center: {x: 0.000000041907455, y: 0.04281397, z: -0.00000008381491}
+--- !u!64 &1398640529349942408
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8768106421517500989}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &8768106421608415214
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,6 +228,7 @@ GameObject:
   - component: {fileID: 8768106421608415210}
   - component: {fileID: 8768106421608415211}
   - component: {fileID: 8768106421608415212}
+  - component: {fileID: 3907775058955690316}
   m_Layer: 0
   m_Name: Cuerpo
   m_TagString: Untagged
@@ -288,11 +304,25 @@ CapsuleCollider:
   m_GameObject: {fileID: 8768106421608415214}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2.06422
   m_Direction: 1
   m_Center: {x: 0.00000004190745, y: 0.032110672, z: -0.00000008381491}
+--- !u!64 &3907775058955690316
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8768106421608415214}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &8768106421738297471
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,6 +334,7 @@ GameObject:
   - component: {fileID: 8768106421738297470}
   - component: {fileID: 8768106421738297467}
   - component: {fileID: 8768106421738297468}
+  - component: {fileID: 7684419079766388926}
   m_Layer: 0
   m_Name: Tapa
   m_TagString: Untagged
@@ -370,6 +401,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7684419079766388926
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8768106421738297471}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &8768106422307093114
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,6 +426,7 @@ GameObject:
   - component: {fileID: 8768106422307093113}
   - component: {fileID: 8768106422307093126}
   - component: {fileID: 8768106422307093127}
+  - component: {fileID: 68138450290237764}
   m_Layer: 0
   m_Name: Tapa
   m_TagString: Untagged
@@ -447,6 +493,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &68138450290237764
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8768106422307093114}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &8768106422522956504
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,7 +531,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8768106422522956504}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: -0.00000035762784}
-  m_LocalPosition: {x: 0, y: 6, z: 0}
+  m_LocalPosition: {x: 0, y: 7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8768106421738297470}
