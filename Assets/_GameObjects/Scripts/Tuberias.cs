@@ -5,17 +5,21 @@ using UnityEngine;
 public class Tuberias : MonoBehaviour
 {
     public int velocidad;
+    public float rango;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        transform.Translate(0,Random.Range(rango*-1,rango),0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.back * Time.deltaTime * velocidad);
+        if (GameManager.playing == true)
+        {
+            transform.Translate(Vector3.back * Time.deltaTime * velocidad);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)

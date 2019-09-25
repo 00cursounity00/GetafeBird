@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public static bool playing = false;
+
     public static void Reload()
     {
         SceneManager.LoadScene(0);
