@@ -28,7 +28,15 @@ public class Pajaro : MonoBehaviour
         rb.AddForce(Vector3.down * gravedad);
         if (GameManager.playing == true)
         {
-            transform.Rotate(rb.GetPointVelocity(transform.position).y * -0.1f, 0, 0);
+            if (rb.GetPointVelocity(transform.position).y < 0 && transform.rotation.x < 0.2)
+            {
+                transform.Rotate(5, 0, 0);
+            }
+
+            else if (rb.GetPointVelocity(transform.position).y > 0 && transform.rotation.x > -0.2)
+            {
+                transform.Rotate(-15, 0, 0);
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && rb.GetPointVelocity(transform.position).y < 0)
