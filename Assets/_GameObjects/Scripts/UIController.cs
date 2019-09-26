@@ -5,6 +5,8 @@ using UnityEngine;
 public class UIController : MonoBehaviour
 {
     Rigidbody rbPajaro;
+    Transform trPajaro;
+    public GameObject prefabTuberia;
 
     private void Start()
     {
@@ -14,7 +16,9 @@ public class UIController : MonoBehaviour
     public void Jugar()
     {
         GameManager.playing = true;
+        GameManager.time = Time.realtimeSinceStartup;
         rbPajaro.isKinematic = false;
+        Instantiate(prefabTuberia, new Vector3 (0,0,26), new Quaternion());
     }
 
     public void Reiniciar()

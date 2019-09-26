@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static bool playing = false;
+    public static int score = 0;
+    public static float time = 0;
 
     public static void Reload()
     {

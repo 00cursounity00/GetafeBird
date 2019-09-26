@@ -5,12 +5,11 @@ using UnityEngine.UI;
 
 public class Pajaro : MonoBehaviour
 {
-    public int puntuacion = 0;
     Rigidbody rb;
     AudioSource audioSource;
     [SerializeField] GameObject prefabSangre;
-    private int fuerza = 1200;
-    private int gravedad = 10;
+    private int fuerza = 1300;
+    private int gravedad = 20;
     public Text txPuntuacion;
     [SerializeField] AudioClip sonidoAlas;
     [SerializeField] AudioClip sonidoPunto;
@@ -27,7 +26,12 @@ public class Pajaro : MonoBehaviour
     void Update()
     {
         rb.AddForce(Vector3.down * gravedad);
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (GameManager.playing == true)
+        {
+            transform.Rotate(rb.GetPointVelocity(transform.position).y * -0.1f, 0, 0);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && rb.GetPointVelocity(transform.position).y < 0)
         {
             Saltar();
         }
@@ -54,8 +58,8 @@ public class Pajaro : MonoBehaviour
     private void Puntuar()
     {
         audioSource.PlayOneShot(sonidoPunto);
-        puntuacion++;
-        txPuntuacion.text = "Score: " + puntuacion.ToString();
+        GameManager.score++;
+        txPuntuacion.text = "Score: " + GameManager.score.ToString();
     }
 
     private void Morir()
@@ -63,6 +67,7 @@ public class Pajaro : MonoBehaviour
         botonReload.SetActive(true);
         Instantiate(prefabSangre, transform.position, transform.rotation);
         GameManager.playing = false;
+        GameManager.score = 0;
         Destroy(gameObject);
     }
 
